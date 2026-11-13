@@ -60,7 +60,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 }
 .btn-light { background: #fff; color: #191B40; }
 .btn-light:hover { background: var(--peri-soft); }
-.btn-ghost { border-color: var(--line-strong); color: var(--text); }
+.btn-ghost { border-color: var(--line-strong); color: var(--text); background: transparent; }
 .btn-ghost:hover { border-color: var(--peri); background: rgba(142, 155, 255, .08); }
 .btn-gold { background: var(--gold); color: var(--gold-ink); }
 .btn-gold:hover { background: #F3CD7A; }
@@ -412,4 +412,20 @@ section { scroll-margin-top: 16px; }
   .test-name { grid-column: 1 / -1; }
   .obp-row { grid-template-columns: 1fr; }
   .calc-form fieldset { padding: 6px 14px 16px; }
+}
+
+/* ---------- Geri sayım ---------- */
+.countdown { display: grid; grid-template-columns: auto 1fr; gap: clamp(24px, 6vw, 80px); align-items: end; }
+.cd-main { display: flex; align-items: baseline; gap: 14px; }
+.cd-main b { font: 800 clamp(5rem, 3rem + 14vw, 13rem)/.85 var(--display); letter-spacing: -0.05em; color: var(--gold); font-variant-numeric: tabular-nums; }
+.cd-main span { font: 800 clamp(1.4rem, 1rem + 2vw, 2.4rem)/1 var(--display); color: var(--peri-soft); }
+.cd-rest { margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1.5px solid var(--line-strong); }
+.cd-rest div { padding: 14px 12px 4px 0; }
+.cd-rest dt { color: var(--muted); font-weight: 700; font-size: var(--step--1); }
+.cd-rest dd { margin: 4px 0 0; font: 800 clamp(1.1rem, .9rem + 1vw, 1.6rem)/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.cd-dates { margin-top: 28px; color: var(--muted); }
+.cd-dates b { color: var(--text); }
+@media (max-width: 800px) {
+  .countdown { grid-template-columns: 1fr; }
+  .cd-rest { grid-template-columns: 1fr 1fr; }
 }

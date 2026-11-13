@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TYT Net Hesaplama 2027: Net ve Puan | Ritim</title>
+  <meta name="description" content="TYT doğru ve yanlışlarını gir; Türkçe, Sosyal, Matematik ve Fen netini, toplam netini ve yaklaşık TYT puanını anında gör. Ücretsiz TYT net hesaplama.">
+  <meta name="theme-color" content="#14122B">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ritim">
+  <meta property="og:title" content="TYT Net Hesaplama 2027: Net ve Puan">
+  <meta property="og:description" content="TYT doğru ve yanlışlarını gir; Türkçe, Sosyal, Matematik ve Fen netini, toplam netini ve yaklaşık TYT puanını anında gör. Ücretsiz TYT net hesaplama.">
+  <meta property="og:image" content="https://ritimyks.com/assets/img/og.jpg">
+  <meta property="og:url" content="https://ritimyks.com/tyt-net-hesaplama/">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://ritimyks.com/tyt-net-hesaplama/">
+  <link rel="icon" href="../assets/img/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "TYT neti nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her testte net = doğru sayısı − (yanlış sayısı ÷ 4). Dört yanlış bir doğruyu götürür, boşlar neti etkilemez. Toplam TYT neti dört testin netlerinin toplamıdır."}}, {"@type": "Question", "name": "TYT'de kaç soru var?", "acceptedAnswer": {"@type": "Answer", "text": "TYT'de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20 soru."}}, {"@type": "Question", "name": "TYT puanı için baraj var mı?", "acceptedAnswer": {"@type": "Answer", "text": "TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapılması gerekir."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#arac">Araca geç</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="Ritim ana sayfa">
+        <img src="../assets/img/icon.svg" width="36" height="36" alt="">
+        <span>Ritim</span>
+      </a>
+      <nav class="nav-links" aria-label="YKS araçları">
+        <a href="../puan-hesaplama/">Puan hesaplama</a>
+        <a href="../tyt-net-hesaplama/" aria-current="page">TYT net</a>
+        <a href="../obp-hesaplama/">OBP</a>
+        <a href="../yks-kac-gun-kaldi/">Kaç gün kaldı</a>
+      </nav>
+      <a class="btn btn-light nav-cta" href="../#indir">İndir</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="calc-hero">
+      <div class="wrap">
+        <h1>TYT net hesaplama</h1>
+        <p class="lead">Dört testin doğru ve yanlış sayısını gir; test test netin, toplam netin ve yaklaşık TYT ham puanın yazarken hesaplansın.</p>
+      </div>
+    </section>
+
+    <section class="calc" id="arac" aria-label="TYT net hesaplama">
+      <div class="wrap calc-grid">
+        <form class="calc-form" id="form" novalidate>
+          <fieldset class="tests" id="tyt"><legend>TYT <small>120 soru</small></legend></fieldset>
+          <button type="reset" class="btn btn-ghost">Temizle</button>
+        </form>
+        <aside class="result" aria-live="polite">
+          <h2>Sonucun</h2>
+          <dl>
+            <div><dt>Toplam doğru</dt><dd id="r-d">0</dd></div>
+            <div><dt>Toplam yanlış</dt><dd id="r-y">0</dd></div>
+            <div class="main"><dt>TYT neti</dt><dd id="r-net">0,00</dd></div>
+            <div><dt>TYT puanı <small>ham</small></dt><dd id="r-score">–</dd></div>
+          </dl>
+          <p class="warn" id="r-warn" hidden></p>
+          <p class="result-note">Puan yaklaşık hesaptır; OBP eklenmemiştir.</p>
+          <div class="result-cta">
+            <p><b>AYT ve OBP ile yerleştirme puanın?</b> Tam hesap için puan hesaplama sayfasını kullan.</p>
+            <a class="btn btn-gold" href="../puan-hesaplama/">YKS puan hesaplama</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="calc-info">
+      <div class="wrap calc-info-grid">
+        <article>
+          <h2>TYT neti nasıl hesaplanır?</h2>
+          <p>Her testte <b>net = doğru − yanlış ÷ 4</b> formülü kullanılır. Dört yanlış bir doğruyu götürür; boş bıraktığın sorular netini değiştirmez.</p>
+          <p>TYT'de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20. Toplam netin bu dört testin netlerinin toplamıdır.</p>
+        </article>
+        <article>
+          <h2>Netten puana</h2>
+          <p>TYT puanı 100 taban puanla başlar; her testin neti kendi katsayısıyla çarpılıp eklenir. Katsayıları ÖSYM her yıl sınav sonuçlarına göre belirlediği için buradaki puan yaklaşık bir değerdir.</p>
+          <p>TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapman gerekir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Hesabı Ritim tutsun, sen çalış.</h2>
+        <p>Ritim denemelerini okur, sınava kadar haftanı planlar ve hangi konuya çalışacağını söyler. Premium ayda sadece ₺33.</p>
+        <div class="stores"><a class="btn btn-light" href="../">Ritim'i tanı</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Ritim, YKS koçu</span>
+      <nav aria-label="Site">
+        <a href="../">Ana sayfa</a>
+        <a href="../puan-hesaplama/">YKS puan hesaplama</a>
+        <a href="../tyt-net-hesaplama/">TYT net hesaplama</a>
+        <a href="../obp-hesaplama/">OBP hesaplama</a>
+        <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
+        <a href="../privacy/">Gizlilik</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n, d = 2) => n.toLocaleString("tr-TR", { minimumFractionDigits: d, maximumFractionDigits: d });
+    const TESTS = [
+      { id: "tr", name: "Türkçe", q: 40, k: 3.3 }, { id: "sb", name: "Sosyal Bilimler", q: 20, k: 3.4 },
+      { id: "tm", name: "Temel Matematik", q: 40, k: 3.3 }, { id: "fb", name: "Fen Bilimleri", q: 20, k: 3.4 }
+    ];
+    $("tyt").insertAdjacentHTML("beforeend", TESTS.map((t) => `<div class="test" data-test="${t.id}" data-q="${t.q}">
+        <span class="test-name">${t.name} <small>${t.q} soru</small></span>
+        <label class="field"><span>Doğru</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="d" aria-label="${t.name} doğru"></label>
+        <label class="field"><span>Yanlış</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="y" aria-label="${t.name} yanlış"></label>
+        <output class="net" aria-label="${t.name} net">0,00</output>
+      </div>`).join(""));
+    function calc() {
+      let D = 0, Y = 0, net = 0, score = 100, bad = false, any = false; const nets = {};
+      TESTS.forEach((t) => {
+        const el = document.querySelector(`[data-test="${t.id}"]`);
+        const dv = el.querySelector('[data-kind="d"]').value, yv = el.querySelector('[data-kind="y"]').value;
+        const d = Math.max(0, Math.floor(+dv || 0)), y = Math.max(0, Math.floor(+yv || 0));
+        if (dv !== "" || yv !== "") any = true;
+        const over = d + y > t.q; el.classList.toggle("bad", over); bad = bad || over;
+        const n = over ? 0 : d - y / 4; nets[t.id] = n;
+        el.querySelector(".net").textContent = over ? "fazla" : fmt(n);
+        D += d; Y += y; net += n; score += n * t.k;
+      });
+      $("r-d").textContent = D; $("r-y").textContent = Y; $("r-net").textContent = fmt(net);
+      const warn = [];
+      if (bad) warn.push("Bir testte doğru ve yanlış toplamı soru sayısını aşıyor.");
+      const ok = nets.tr >= 0.5 || nets.tm >= 0.5;
+      if (any && !bad && !ok) warn.push("TYT puanı hesaplanamaz: Türkçe veya Temel Matematik'ten en az 0,5 net gerekir.");
+      $("r-score").textContent = any && !bad && ok ? fmt(score) : "–";
+      $("r-warn").hidden = warn.length === 0; $("r-warn").textContent = warn.join(" ");
+    }
+    $("form").addEventListener("input", calc);
+    $("form").addEventListener("reset", () => setTimeout(calc, 0));
+    calc();
+  </script>
+</body>
+</html>

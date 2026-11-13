@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBP Hesaplama 2027: Diploma Notu Kaç Puan? | Ritim</title>
+  <meta name="description" content="Diploma notunu gir; OBP'ni ve YKS yerleştirme puanına eklenecek puanı anında gör. Kırık OBP dahil ücretsiz OBP hesaplama.">
+  <meta name="theme-color" content="#14122B">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ritim">
+  <meta property="og:title" content="OBP Hesaplama 2027: Diploma Notu Kaç Puan?">
+  <meta property="og:description" content="Diploma notunu gir; OBP'ni ve YKS yerleştirme puanına eklenecek puanı anında gör. Kırık OBP dahil ücretsiz OBP hesaplama.">
+  <meta property="og:image" content="https://ritimyks.com/assets/img/og.jpg">
+  <meta property="og:url" content="https://ritimyks.com/obp-hesaplama/">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://ritimyks.com/obp-hesaplama/">
+  <link rel="icon" href="../assets/img/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "OBP nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Diploma notu 5 ile çarpılarak OBP bulunur. OBP'nin 0,12 katı YKS yerleştirme puanına eklenir. Diploma notu 100 olan aday en fazla 60 puan alır."}}, {"@type": "Question", "name": "Kırık OBP nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Önceki yıl sınavla bir yükseköğretim programına yerleşen adaylarda OBP katsayısı 0,12 yerine 0,06 olarak uygulanır; eklenen puan yarıya düşer."}}, {"@type": "Question", "name": "Diploma notu 80 olan kaç puan alır?", "acceptedAnswer": {"@type": "Answer", "text": "OBP 400 olur ve yerleştirme puanına 48 puan eklenir. Kırık OBP durumunda bu katkı 24 puandır."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#arac">Araca geç</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="Ritim ana sayfa">
+        <img src="../assets/img/icon.svg" width="36" height="36" alt="">
+        <span>Ritim</span>
+      </a>
+      <nav class="nav-links" aria-label="YKS araçları">
+        <a href="../puan-hesaplama/">Puan hesaplama</a>
+        <a href="../tyt-net-hesaplama/">TYT net</a>
+        <a href="../obp-hesaplama/" aria-current="page">OBP</a>
+        <a href="../yks-kac-gun-kaldi/">Kaç gün kaldı</a>
+      </nav>
+      <a class="btn btn-light nav-cta" href="../#indir">İndir</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="calc-hero">
+      <div class="wrap">
+        <h1>OBP hesaplama</h1>
+        <p class="lead">Diploma notunu yaz; Ortaöğretim Başarı Puanın (OBP) ve YKS yerleştirme puanına eklenecek katkı hemen hesaplansın.</p>
+      </div>
+    </section>
+
+    <section class="calc" id="arac" aria-label="OBP hesaplama">
+      <div class="wrap calc-grid">
+        <form class="calc-form" id="form" novalidate>
+          <fieldset class="obp">
+            <legend>Diploma notu</legend>
+            <div class="obp-row">
+              <label class="field"><span>Diploma notun (50–100)</span>
+                <input type="number" id="diploma" inputmode="decimal" min="50" max="100" step="0.01" placeholder="örn. 85">
+              </label>
+              <label class="check"><input type="checkbox" id="kirik"><span>Geçen yıl bir programa yerleştim (kırık OBP)</span></label>
+            </div>
+          </fieldset>
+          <button type="reset" class="btn btn-ghost">Temizle</button>
+        </form>
+        <aside class="result" aria-live="polite">
+          <h2>Sonucun</h2>
+          <dl>
+            <div><dt>OBP</dt><dd id="r-obp">–</dd></div>
+            <div><dt>Katsayı</dt><dd id="r-k">0,12</dd></div>
+            <div class="main"><dt>Puanına eklenen</dt><dd id="r-add">–</dd></div>
+          </dl>
+          <p class="warn" id="r-warn" hidden></p>
+          <div class="result-cta">
+            <p><b>Bu katkıyla toplam puanın?</b> Netlerini de girip yerleştirme puanını hesapla.</p>
+            <a class="btn btn-gold" href="../puan-hesaplama/">YKS puan hesaplama</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="calc-info">
+      <div class="wrap calc-info-grid">
+        <article>
+          <h2>OBP nedir, nasıl hesaplanır?</h2>
+          <p>Ortaöğretim Başarı Puanı, diploma notunun 5 ile çarpılmasıyla bulunur. Diploma notu 50 ile 100 arasında olduğu için OBP 250 ile 500 arasında değişir.</p>
+          <p>OBP'nin <b>0,12</b> ile çarpımı yerleştirme puanına eklenir. Diploma notu 100 olan bir aday 60, 80 olan bir aday 48, 50 olan bir aday 30 puan alır.</p>
+        </article>
+        <article>
+          <h2>Kırık OBP</h2>
+          <p>Önceki yıl sınavla bir yükseköğretim programına yerleştiysen OBP katsayın 0,12 yerine <b>0,06</b> olur. Aynı diploma notuyla eklenen puan yarıya iner; buna kırık OBP denir.</p>
+          <p>Bu yüzden diploma notundaki her 1 puan, yerleştirme puanında 0,6 puan eder; kırık OBP'de 0,3 puan.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Hesabı Ritim tutsun, sen çalış.</h2>
+        <p>Ritim denemelerini okur, sınava kadar haftanı planlar ve hangi konuya çalışacağını söyler. Premium ayda sadece ₺33.</p>
+        <div class="stores"><a class="btn btn-light" href="../">Ritim'i tanı</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Ritim, YKS koçu</span>
+      <nav aria-label="Site">
+        <a href="../">Ana sayfa</a>
+        <a href="../puan-hesaplama/">YKS puan hesaplama</a>
+        <a href="../tyt-net-hesaplama/">TYT net hesaplama</a>
+        <a href="../obp-hesaplama/">OBP hesaplama</a>
+        <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
+        <a href="../privacy/">Gizlilik</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n, d = 2) => n.toLocaleString("tr-TR", { minimumFractionDigits: d, maximumFractionDigits: d });
+    function calc() {
+      const raw = $("diploma").value;
+      const dip = parseFloat(String(raw).replace(",", "."));
+      const k = $("kirik").checked ? 0.06 : 0.12;
+      $("r-k").textContent = fmt(k);
+      const ok = !isNaN(dip) && dip >= 50 && dip <= 100;
+      $("r-obp").textContent = ok ? fmt(dip * 5) : "–";
+      $("r-add").textContent = ok ? "+" + fmt(dip * 5 * k) : "–";
+      const bad = raw !== "" && !ok;
+      $("r-warn").hidden = !bad; $("r-warn").textContent = bad ? "Diploma notu 50 ile 100 arasında olmalı." : "";
+    }
+    $("form").addEventListener("input", calc);
+    $("form").addEventListener("reset", () => setTimeout(calc, 0));
+    calc();
+  </script>
+</body>
+</html>

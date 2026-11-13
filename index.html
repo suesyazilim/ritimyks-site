@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ritim — YKS Koçu | Deneme analizi, akıllı plan, yanlış defteri</title>
   <meta name="description" content="YKS hazırlığının tamamı tek uygulamada: deneme analizi ve OBP dahil sıralama tahmini, yıllık ve haftalık plan, yanlış defteri, Pomodoro ve kişisel koç önerileri. Ayda 33 TL'den.">
-  <meta name="theme-color" content="#1B1F45">
+  <meta name="theme-color" content="#14122B">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ritim — YKS Koçu">
   <meta property="og:description" content="Deneme analizi, yıllık ve haftalık plan, yanlış defteri, Pomodoro ve koç önerileri tek uygulamada. Ayda 33 TL'ye kişisel YKS koçu.">
@@ -51,6 +51,14 @@
     <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.5-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></symbol>
   </svg>
 
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5h9.5a4 4 0 0 1 4 4V20H9a4 4 0 0 1-4-4V4.5z"/><path d="M5 16a3 3 0 0 1 3-3h10.5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20z"/><path d="M14 3.5v4h4M10 13h5M10 16.5h5"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.200 2-4 .2 1.500 1 2.500 2 3 0-3-.5-6 1-9z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4M6 5h11l-2 3.500 2 3.500H6"/></symbol>
+  </svg>
+
   <header class="nav">
     <div class="wrap">
       <a class="brand" href="./" aria-label="Ritim ana sayfa">
@@ -59,6 +67,7 @@
       </a>
       <nav class="nav-links" aria-label="Sayfa bölümleri">
         <a href="#ozellikler">Neler yapar</a>
+        <a href="#kocluk">Koçluk</a>
         <a href="#fiyat">Fiyat</a>
         <a href="#sss">Sorular</a>
       </nav>
@@ -68,21 +77,23 @@
 
   <main id="icerik">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title">Her gün ne çalışacağını bilen YKS koçu.</h1>
-          <p class="lead">Ritim denemelerini okur, sınava kadar haftanı planlar ve eksiğini gösterir. Birebir koçluğun yaptığını cebinde, ayda ₺33'e yapar.</p>
-          <div class="stores" id="indir">
-            <a class="store" href="#" data-store="play">
-              <svg aria-hidden="true"><use href="#i-play"/></svg>
-              <span><small>Google Play'den indir</small><strong>Google Play</strong></span>
-            </a>
-            <a class="store" href="#" data-store="appstore">
-              <svg aria-hidden="true"><use href="#i-apple"/></svg>
-              <span><small>App Store'dan indir</small><strong>App Store</strong></span>
-            </a>
+      <div class="wrap">
+        <h1 id="hero-title">Her gün ne çalışacağını bilen YKS koçu.</h1>
+        <div class="hero-row">
+          <p class="lead">Ritim denemelerini okur, sınava kadar her haftanı planlar, yanlışlarını ve soru bankalarını takip eder. Birebir koçluğun yaptığını cebinde yapar.</p>
+          <div class="hero-cta" id="indir">
+            <p class="price-line"><b>Ayda sadece ₺33</b><span>yıllık Premium'da. Ücretsiz başla, 7 gün dene.</span></p>
+            <div class="stores">
+              <a class="store" href="#" data-store="play">
+                <svg aria-hidden="true"><use href="#i-play"/></svg>
+                <span><small>Google Play'den indir</small><strong>Google Play</strong></span>
+              </a>
+              <a class="store" href="#" data-store="appstore">
+                <svg aria-hidden="true"><use href="#i-apple"/></svg>
+                <span><small>App Store'dan indir</small><strong>App Store</strong></span>
+              </a>
+            </div>
           </div>
-          <p class="hero-note">Ücretsiz başla. Premium'u 7 gün ücretsiz dene.</p>
         </div>
       </div>
 
@@ -96,87 +107,116 @@
       </figure>
     </section>
 
-    <section class="story" id="ozellikler" aria-label="Ritim neler yapar" data-step="0">
-      <div class="wrap story-grid">
-        <div class="story-steps">
-          <article class="story-step" data-step="0">
-            <div class="story-text">
-              <h2>Uygulamayı aç, bugün ne çalışacağın hazır.</h2>
-              <p>Sınava kalan gün, koçunun bugünkü notu ve günün görevleri tek ekranda. Düşünmeye değil, çalışmaya başlarsın.</p>
-              <ul class="checks">
-                <li>Koç önerisi: "Bu konuya 18 gündür dokunmadın"</li>
-                <li>Görevi bitir, çalışma süren kendiliğinden işlensin</li>
-              </ul>
-            </div>
+    <!-- Sahne: telefon kaydırmaya bağlı olarak büyür, yerine oturur; ekranı ve zemin rengi sahne sahne değişir. -->
+    <section class="stage" id="ozellikler" aria-label="Ritim neler yapar">
+      <div class="pin">
+        <div class="captions">
+          <article class="caption">
+            <h2>Uygulamayı aç, bugün ne çalışacağın hazır.</h2>
+            <p>Sınava kalan gün, koçunun bugünkü notu ve günün görevleri tek ekranda. Düşünmeye değil, çalışmaya başlarsın.</p>
+            <ul class="checks">
+              <li>Görevi bitir; çalışma süren ve konu ilerlemen kendiliğinden işlenir</li>
+              <li>Çalışma serin ve haftalık süren hep gözünün önünde</li>
+            </ul>
           </article>
-          <article class="story-step" data-step="1">
-            <div class="story-text">
-              <h2>Sınava kadar her haftan planlı.</h2>
-              <p>Kalan haftalara konuları dağıtır; zayıf olduğun ve ÖSYM'nin sık sorduğu konuları öne alır. Planı tek dokunuşla kalan günlerine göre yeniden kurarsın.</p>
-              <ul class="checks">
-                <li>Yıllık yol haritası ve haftalık görevler</li>
-                <li>Son haftalarda daha fazla deneme</li>
-              </ul>
-            </div>
+          <article class="caption">
+            <h2>Akıllı planlayıcı, sınava kadar her haftanı kurar.</h2>
+            <p>Denemelerindeki eksiklerine ve ÖSYM'nin sık sorduğu konulara bakar, kalan haftalara sana özel bir rota çizer.</p>
+            <ul class="checks">
+              <li>Öncelikli derslerini ve haftada kaç deneme çözeceğini sen seçersin</li>
+              <li>Son 4 hafta kendiliğinden deneme ve genel tekrar ağırlıklı olur</li>
+              <li>Haftalık planı tek dokunuşla yeniden kurar, PDF olarak paylaşırsın</li>
+            </ul>
           </article>
-          <article class="story-step" data-step="2">
-            <div class="story-text">
-              <h2>Denemeyi gir, gerçek puanını gör.</h2>
-              <p>Ders ders doğru ve yanlışını gir. Netin, ham puanın ve diploma notunla birlikte yerleştirme puanın anında hesaplanır.</p>
-              <ul class="checks">
-                <li>OBP ve kırık OBP dahil yerleştirme puanı</li>
-                <li>2023–2025 sıralamalarına göre tahmini yerin</li>
-                <li>ÖSYM'nin 0,5 net barajı kuralına uygun hesap</li>
-              </ul>
-            </div>
+          <article class="caption">
+            <h2>Denemeyi gir, gerçek puanını ve sıralamanı gör.</h2>
+            <p>Ders ders doğru ve yanlışını gir. Netin, diploma notunla birlikte yerleştirme puanın ve tahmini sıralaman anında çıkar.</p>
+            <ul class="checks">
+              <li>OBP ve kırık OBP dahil yerleştirme puanı</li>
+              <li>"Bu puanı 2023, 2024, 2025'te yapsaydın" sıralama tahmini</li>
+              <li>Her denemeye özel koç yorumu</li>
+            </ul>
           </article>
-          <article class="story-step" data-step="3">
-            <div class="story-text">
-              <h2>Aynı yanlışı ikinci kez yapma.</h2>
-              <p>Yanlışlarını ve boşlarını konu ve sebebiyle işaretle. Yanlış defterin kendiliğinden dolar; hangi konuda, neden hata yaptığını görürsün.</p>
-              <ul class="checks">
-                <li>Sebep: dikkatsizlik, yanlış anlama, strateji, süre</li>
-                <li>Açık kalan yanlışlar koçun önerilerine yansır</li>
-              </ul>
-            </div>
+          <article class="caption">
+            <h2>Aynı yanlışı ikinci kez yapma.</h2>
+            <p>Deneme biter bitmez yanlışlarını ve boşlarını konu ve sebebiyle işaretle. Yanlış defterin kendiliğinden dolar.</p>
+            <ul class="checks">
+              <li>Sebep etiketleri: dikkatsizlik, yanlış anlama, strateji, süre</li>
+              <li>Soru fotoğrafı ve kendi notun</li>
+              <li>En çok yanlış yaptığın ve boş bıraktığın konular listelenir</li>
+            </ul>
+          </article>
+          <article class="caption">
+            <h2>Soru bankalarını rafa diz, sayfa sayfa takip et.</h2>
+            <p>Elindeki bütün kitapları ekle, bitirdiğin sayfaları işaretle. Hangi kitabın neresinde olduğunu ve toplam ilerlemeni tek bakışta görürsün.</p>
+            <ul class="checks">
+              <li>Kitap başına ilerleme çubuğu ve biten kitaplar</li>
+              <li>Ders ve TYT/AYT ayrımıyla düzenli bir raf</li>
+            </ul>
+          </article>
+          <article class="caption">
+            <h2>Telefonu ters çevir, odak başlasın.</h2>
+            <p>Odak modunda telefonu masaya yüzü kapalı bırakırsın. Kaldırırsan uyarır; 7 saniye içinde geri çevirmezsen oturum durur.</p>
+            <ul class="checks">
+              <li>Pomodoro: konu, soru ya da deneme oturumu</li>
+              <li>Biten her tur seçtiğin konuya ve soru sayına işlenir</li>
+            </ul>
           </article>
         </div>
-        <div class="story-phone-col" aria-hidden="true">
-          <div class="story-phone" id="story-phone">
-            <div class="phone">
-              <div class="screens">
-                <img class="on" src="assets/img/home.jpg" width="540" height="1200" alt="">
-                <img src="assets/img/plan.jpg" width="540" height="1200" alt="" loading="lazy">
-                <img src="assets/img/analysis.jpg" width="540" height="1200" alt="" loading="lazy">
-                <img src="assets/img/mistakes.jpg" width="540" height="1200" alt="" loading="lazy">
-              </div>
+
+        <div class="device" id="device" aria-hidden="true">
+          <div class="phone">
+            <div class="screens">
+              <img src="assets/img/home.jpg" width="540" height="1200" alt="">
+              <img src="assets/img/plan.jpg" width="540" height="1200" alt="">
+              <img src="assets/img/analysis.jpg" width="540" height="1200" alt="">
+              <img src="assets/img/mistakes.jpg" width="540" height="1200" alt="">
+              <img src="assets/img/shelf.jpg" width="540" height="1200" alt="">
+              <img src="assets/img/pomodoro.jpg" width="540" height="1200" alt="">
             </div>
           </div>
         </div>
+
+        <ol class="rail" aria-hidden="true">
+          <li>Bugün</li><li>Plan</li><li>Deneme</li><li>Yanlışlar</li><li>Kitaplık</li><li>Odak</li>
+        </ol>
       </div>
     </section>
 
-    <section class="facts" aria-label="Kısaca Ritim">
-      <div class="wrap facts-grid">
-        <p><b>181 konu</b>TYT ve AYT'nin tamamı</p>
-        <p><b>10 yıllık</b>ÖSYM soru dağılımıyla öncelik</p>
-        <p><b>OBP dahil</b>yerleştirme puanı ve sıralama tahmini</p>
-        <p><b>Hesap yok</b>verilerin sadece telefonunda</p>
+    <section class="coach" id="kocluk" aria-labelledby="coach-title">
+      <div class="wrap coach-grid">
+        <div class="coach-copy">
+          <h2 id="coach-title" class="section-title">Koçluk, sayı göstermek değil; ne yapacağını söylemektir.</h2>
+          <p class="section-sub">Ritim girdiğin her denemeye, çalıştığın her dakikaya ve defterindeki her yanlışa bakar. Sonra bir koçun söyleyeceğini söyler. Sağdakiler uygulamanın gerçekten kurduğu cümleler.</p>
+          <p class="coach-price">Birebir YKS koçluğu ayda binlerce lira tutabiliyor. Ritim Premium <b>ayda sadece ₺33</b>.</p>
+        </div>
+        <ul class="notes">
+          <li><b>Bu hafta odak: Türev</b><span>AYT Matematik içinde kritik bandında. 2-3 oturumla yeşile çıkarabilirsin.</span></li>
+          <li><b>Kimyasal Tepkimelerde Denge tekrar zamanı</b><span>18 gündür dokunmadın. Kısa bir tekrar unutmayı önler.</span></li>
+          <li><b>Tempo iyi gidiyor</b><span>Son 3 denemen +4,5 net yukarı. Aynı düzeni koru.</span></li>
+          <li><b>Yanlış defterinde 12 açık soru</b><span>Yarım saat ayır, çoğunu kapat. Net hızlı yükselir.</span></li>
+          <li><b>Sınava 90 gün, öncelikleri sıkalım</b><span>6 konu kritik ya da zayıf bandında. Bu hafta yeniler yerine bunlara dön.</span></li>
+        </ul>
       </div>
     </section>
 
-    <section class="features" aria-labelledby="ozellik-title">
-      <div class="wrap">
-        <h2 id="ozellik-title" class="section-title">Çoğu uygulama sayaç verir. Ritim ne çalışacağını söyler.</h2>
-
-        <dl class="extras">
-          <div><dt><svg aria-hidden="true"><use href="#i-spark"/></svg>Koç önerileri</dt><dd>"Türev ekstra ilgi istiyor", "Bu konuya 2 haftadır dokunmadın": verinden çıkan net yönlendirmeler.</dd></div>
-          <div><dt><svg aria-hidden="true"><use href="#i-timer"/></svg>Telefonu ters çevir, odaklan</dt><dd>Pomodoro telefon yüzü kapalıyken çalışır, kaldırırsan uyarır. Biten her tur konuna işlenir.</dd></div>
-          <div><dt><svg aria-hidden="true"><use href="#i-chart"/></svg>İstatistik ve seri</dt><dd>Net gelişimi, ders bazlı ilerleme, çalışma ısı haritası ve günlük seri.</dd></div>
-          <div><dt><svg aria-hidden="true"><use href="#i-target"/></svg>ÖSYM soru dağılımı</dt><dd>Son 10 yılda hangi konudan kaç soru çıktığını gör, önceliğini veriyle belirle.</dd></div>
-          <div><dt><svg aria-hidden="true"><use href="#i-widget"/></svg>Ana ekran widget'ı</dt><dd>Sınava kalan gün, bugünün görevleri ve son netin; uygulamayı açmadan.</dd></div>
-          <div><dt><svg aria-hidden="true"><use href="#i-calendar"/></svg>Kendi planını da kur</dt><dd>Haftalık planına istediğin görevi kendin ekle ya da çıkar; ücretsiz sürümde de var.</dd></div>
-        </dl>
+    <section class="more" aria-labelledby="more-title">
+      <div class="wrap more-grid">
+        <div class="more-phone"><div class="phone"><img src="assets/img/stats.jpg" width="540" height="1200" alt="İstatistikler: soru çözümü, ders dağılımı ve son denemeler" loading="lazy"></div></div>
+        <div>
+          <h2 id="more-title" class="section-title">Hepsi tek uygulamada, hepsi birbirine bağlı.</h2>
+          <dl class="extras">
+            <div><dt><svg aria-hidden="true"><use href="#i-chart"/></svg>İstatistikler</dt><dd>Net seyri, ders dağılımı, saatte çözdüğün soru ve çalışma ısı haritası. 7 gün, 30 gün ya da tümü.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-target"/></svg>ÖSYM soru dağılımı</dt><dd>Son 10 yılda hangi konudan kaç soru çıktı. 181 konunun her birinde senin durumunla yan yana.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-calendar"/></svg>Haftalık özet</dt><dd>Bu hafta neyi başardın, neyi ihmal ettin: çalışma süren, biten planın ve net farkın tek sayfada.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-bell"/></svg>Hatırlatıcılar</dt><dd>Günlük çalışma hatırlatması, sınav geri sayımı ve haftalık özet bildirimi.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-widget"/></svg>Ana ekran widget'ı</dt><dd>Sınava kalan gün, bugünün görevleri ve son netin; uygulamayı açmadan.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-file"/></svg>PDF rapor</dt><dd>Çalışma raporunu ve haftalık planını PDF olarak dışa aktar; ailenle ya da öğretmeninle paylaş.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-flag"/></svg>Hedefine göre</dt><dd>Hedef üniversiteni ve bölümünü seç; geri sayım ve motivasyon notları ona göre konuşsun.</dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-flame"/></svg>Seri ve rozetler</dt><dd>Günlük serini koru; soru, saat ve net biriktirdikçe rozet aç.</dd></div>
+          </dl>
+          <p class="more-note">Hesap açmak yok. Verilerin sadece telefonunda durur ve uygulama internetsiz çalışır.</p>
+        </div>
       </div>
     </section>
 
@@ -184,7 +224,7 @@
       <div class="wrap">
         <h2 id="nasil-title" class="section-title">Üç adımda kendi koçun</h2>
         <ol class="steps">
-          <li><h3>Seni tanısın</h3><p>Sınıfın, alanın, hedef bölümün ve şu anki netlerin. Bir dakika sürer.</p></li>
+          <li><h3>Seni tanısın</h3><p>Sınıfın, alanın, hedef bölümün ve şu anki netlerin. 7 kısa soru, bir dakika sürer; sonunda ilk haftalık planın hazır olur.</p></li>
           <li><h3>Denemelerini gir</h3><p>Ders ders doğru ve yanlış; istersen konu konu. Yanlışlarını deftere işle.</p></li>
           <li><h3>Planına uy</h3><p>Ritim her hafta neyi, ne kadar çalışacağını söyler. Denemelerin ilerledikçe plan da değişir.</p></li>
         </ol>
@@ -202,10 +242,10 @@
             <p class="per">Temel takip için yeterli.</p>
             <ul>
               <li>3 deneme kaydı ve analizi</li>
-              <li>Pomodoro ve çalışma takibi</li>
-              <li>Yanlış defteri</li>
+              <li>Pomodoro, odak modu ve çalışma takibi</li>
+              <li>Yanlış defteri ve soru bankası rafı</li>
               <li>İlk haftalık planın otomatik kurulur</li>
-              <li>Manuel plan, geri sayım, widget</li>
+              <li>Manuel plan, geri sayım, widget, rozetler</li>
               <li class="off">Her hafta otomatik plan ve sıralama tahmini</li>
             </ul>
             <a class="btn btn-ghost" href="#indir">Ücretsiz başla</a>
@@ -215,13 +255,13 @@
             <p class="badge">En çok tercih edilen</p>
             <h3>Premium yıllık</h3>
             <p class="price">₺399,99 <small>/ yıl</small></p>
-            <p class="per">Ayda ₺33, aylığa göre %58 daha ucuz</p>
+            <p class="per">Ayda sadece ₺33, aylığa göre %58 daha ucuz</p>
             <ul>
               <li>Sınırsız deneme</li>
-              <li>Otomatik yıllık ve haftalık plan</li>
-              <li>OBP dahil çoklu yıl sıralama tahmini</li>
+              <li>Akıllı planlayıcı: yıllık ve haftalık otomatik plan</li>
+              <li>OBP dahil 2023–2025 sıralama tahmini</li>
               <li>Fotoğraflı yanlış defteri</li>
-              <li>Koç önerileri ve haftalık özet</li>
+              <li>Koç önerileri, zayıf konu analizi, haftalık özet</li>
             </ul>
             <a class="btn btn-gold" href="#indir">7 gün ücretsiz dene</a>
           </article>
@@ -246,6 +286,10 @@
         <h2 id="sss-title" class="section-title">Merak ettiklerin</h2>
         <div class="faq">
           <details>
+            <summary>Gerçek bir koçun yerini tutar mı?</summary>
+            <p>Bir koçun en çok vakit harcadığı işleri yapar: denemeni okur, haftanı planlar, eksik konunu ve tekrar zamanını söyler. Seninle konuşan bir insan değildir; ama ayda ₺33'e her gün yanındadır.</p>
+          </details>
+          <details>
             <summary>Verilerim nerede saklanıyor?</summary>
             <p>Sadece telefonunda. Hesap açmana gerek yok; denemelerin, planın ve yanlış defterin hiçbir sunucuya gönderilmez. Android'de telefonunu değiştirirsen verilerin Google hesabının otomatik cihaz yedeğiyle yeni telefonuna taşınabilir.</p>
           </details>
@@ -259,7 +303,7 @@
           </details>
           <details>
             <summary>Ücretsiz sürüm yeterli mi?</summary>
-            <p>Takip için evet: 3 deneme, Pomodoro, yanlış defteri, manuel plan ve widget ücretsiz. Sınırsız deneme, otomatik plan ve sıralama tahmini Premium'da.</p>
+            <p>Takip için evet: 3 deneme, Pomodoro ve odak modu, yanlış defteri, soru bankası rafı, manuel plan ve widget ücretsiz. Sınırsız deneme, akıllı planlayıcı, sıralama tahmini ve haftalık özet Premium'da.</p>
           </details>
           <details>
             <summary>Aboneliği nasıl iptal ederim?</summary>
@@ -280,7 +324,7 @@
     <section class="closing" aria-labelledby="cta-title">
       <div class="wrap">
         <h2 id="cta-title">Ritmini bugün kur.</h2>
-        <p>İlk denemeni gir; Ritim bu haftanın planını çıkarsın.</p>
+        <p>İlk denemeni gir; Ritim bu haftanın planını çıkarsın. Premium ayda sadece ₺33.</p>
         <div class="stores">
           <a class="store" href="#" data-store="play">
             <svg aria-hidden="true"><use href="#i-play"/></svg>
@@ -331,7 +375,6 @@
     (function () {
       const DAY = 864e5, WEEK = 7 * DAY;
       const now = new Date();
-      // Hazırlık yılı eylülde başlar; YKS haziranın üçüncü cumartesisi civarı.
       let startYear = now.getMonth() >= 8 ? now.getFullYear() : now.getFullYear() - 1;
       let exam = new Date(startYear + 1, 5, 19);
       if (now > exam) { startYear += 1; exam = new Date(startYear + 1, 5, 19); }
@@ -376,52 +419,101 @@
         "Her çizgi bir hafta, boyu o haftanın çalışma yükü. Parlak olan bu hafta; sınav " + examLabel + " civarında.";
     })();
 
-    // Kaydırmalı hikâye: ortadaki adım aktif olur; telefon ekranı ve zemin rengi ona göre değişir.
+    // Sahne: her şey kaydırma konumuna bağlıdır (eşik değil, sürekli).
+    // Giriş: telefon küçük ve eğik gelir, ekranın ortasında büyür; sonra yana çekilir ve sahneler başlar.
     (function () {
-      const story = document.querySelector(".story");
-      const steps = [...story.querySelectorAll(".story-step")];
-      const screens = [...story.querySelectorAll(".screens img")];
-      const phone = document.getElementById("story-phone");
+      const stage = document.querySelector(".stage");
+      const device = document.getElementById("device");
+      const captions = [...stage.querySelectorAll(".caption")];
+      const screens = [...stage.querySelectorAll(".screens img")];
+      const rail = [...stage.querySelectorAll(".rail li")];
+      const N = captions.length;
+      const INTRO = 1;                       // giriş, sahne birimi cinsinden
       const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      // Sahne zemin renkleri: hepsi koyu, lacivertten mora.
+      const COLORS = [[25,27,64],[42,35,99],[28,38,92],[52,32,98],[33,27,84],[22,24,58]];
+      const END = [20,18,43];                // sonraki bölümün zemini
+      stage.style.setProperty("--scenes", N);
 
-      function activate(i) {
-        story.dataset.step = i;
-        steps.forEach((s, k) => s.classList.toggle("active", k === i));
+      const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+      const ease = (t) => t * t * (3 - 2 * t);
+      const mix = (a, b, t) => a + (b - a) * t;
+      const mixc = (a, b, t) => `rgb(${a.map((v, i) => Math.round(mix(v, b[i], t))).join(",")})`;
+
+      let target = 0, shown = -1, raf = 0;
+
+      function measure() {
+        const r = stage.getBoundingClientRect();
+        const total = r.height - innerHeight;
+        target = clamp(-r.top / total);
+      }
+
+      function render(p) {
+        const u = p * (N + INTRO);
+        const a = ease(clamp(u / 0.55));               // büyüme
+        const b = ease(clamp((u - 0.55) / 0.45));      // yerine çekilme
+        const f = clamp(u - INTRO, 0, N - 0.0001);     // sahne konumu
+        const i = Math.floor(f), local = f - i;
+        const mobile = innerWidth <= 800;
+
+        // Telefon
+        let scale, x, y, rot;
+        if (mobile) {
+          scale = mix(mix(0.5, 1, a), 0.66, b);
+          x = 0;
+          y = mix(mix(46, 2, a), -15, b);
+        } else {
+          scale = mix(mix(0.5, 1.12, a), 1, b);
+          x = mix(0, 21, b);
+          y = mix(48, 0, a);
+        }
+        rot = mix(-10, 0, a);
+        if (reduce) { scale = mobile ? 0.66 : 1; x = mobile ? 0 : 21; y = mobile ? -15 : 0; rot = 0; }
+        device.style.transform =
+          `translate(-50%, -50%) translate(${x}vw, ${y}vh) rotate(${rot}deg) scale(${scale})`;
+
+        // Ekranlar ve metinler: sahnenin son %18'inde bir sonrakine geçiş
+        const out = i < N - 1 ? ease(clamp((local - 0.82) / 0.18)) : 0;
+        captions.forEach((c, k) => {
+          let o = 0, ty = 0;
+          if (k === i) { o = (1 - out) * (k === 0 ? b : 1); ty = -out * 28; }
+          else if (k === i + 1) { o = 0; ty = 28; }
+          if (k === i && local < 0.16 && k > 0) { const inn = ease(local / 0.16); o = inn; ty = (1 - inn) * 28; }
+          c.style.opacity = o.toFixed(3);
+          c.style.transform = `translateY(${ty.toFixed(1)}px)`;
+          c.style.pointerEvents = o > 0.5 ? "auto" : "none";
+        });
         screens.forEach((img, k) => {
-          img.classList.toggle("on", k === i);
-          img.classList.toggle("past", k < i);
+          let o = 0, ty = 0;
+          if (k === i) { o = 1; ty = -out * 4; }
+          else if (k === i + 1) { o = out; ty = (1 - out) * 7; }
+          img.style.opacity = o.toFixed(3);
+          img.style.transform = `translateY(${ty.toFixed(2)}%)`;
+          img.style.zIndex = k === i + 1 ? 2 : 1;
         });
-      }
-      let current = -1;
-      function pickStep() {
-        // Metni okuma noktasına en yakın adım aktif olur
-        // (masaüstünde ekranın ortası, telefonda metin telefonun altında aktığı için daha aşağısı).
-        const mid = innerHeight * (innerWidth <= 800 ? 0.72 : 0.5);
-        let best = 0, bestDist = Infinity;
-        steps.forEach((s, k) => {
-          const r = s.querySelector(".story-text").getBoundingClientRect();
-          const d = Math.abs(r.top + r.height / 2 - mid);
-          if (d < bestDist) { bestDist = d; best = k; }
-        });
-        if (best !== current) { current = best; activate(best); }
+        rail.forEach((li, k) => li.classList.toggle("on", k === i && u >= INTRO * 0.6));
+
+        // Zemin: sahneler arasında kesintisiz renk geçişi; en sonda sayfa zeminine bağlanır
+        let color;
+        const tail = clamp((p - 0.965) / 0.035);
+        if (tail > 0) color = mixc(COLORS[N - 1], END, ease(tail));
+        else color = mixc(COLORS[i], COLORS[Math.min(N - 1, i + 1)], out);
+        stage.style.backgroundColor = color;
       }
 
-      let ticking = false;
-      function update() {
-        ticking = false;
-        pickStep();
-        if (reduce) return;
-        // Telefon kaydırırken yerine "uçarak" gelir: eğik ve küçükten düz ve tam boya.
-        const top = story.getBoundingClientRect().top;
-        const vh = innerHeight;
-        const p = Math.min(1, Math.max(0, (vh - top) / (vh * 0.9)));
-        const e = 1 - Math.pow(1 - p, 3);
-        phone.style.transform =
-          `translateY(${(1 - e) * 22}vh) rotate(${(1 - e) * -9}deg) scale(${0.82 + 0.18 * e})`;
+      function tick() {
+        raf = 0;
+        // Yumuşatma: gösterilen değer hedefe doğru kayar (teker/trackpad sarsıntısını yutar)
+        shown = shown < 0 || reduce ? target : shown + (target - shown) * 0.18;
+        if (Math.abs(target - shown) < 0.0004) shown = target;
+        render(shown);
+        if (shown !== target) raf = requestAnimationFrame(tick);
       }
-      addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-      addEventListener("resize", update);
-      update();
+      function onScroll() { measure(); if (!raf) raf = requestAnimationFrame(tick); }
+
+      addEventListener("scroll", onScroll, { passive: true });
+      addEventListener("resize", onScroll);
+      measure(); shown = target; render(shown);
     })();
   </script>
 </body>

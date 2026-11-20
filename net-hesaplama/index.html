@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Net Hesaplama: Test Net Hesaplama (4 Yanlış 1 Doğru) | Ritim</title>
+  <meta name="description" content="Doğru ve yanlış sayını gir, testlerin netini ve toplam netini anında gör. YKS, TYT, AYT, KPSS (4 yanlış 1 doğru) ve LGS (3 yanlış 1 doğru) için ücretsiz net hesaplama.">
+  <meta name="theme-color" content="#14122B">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ritim">
+  <meta property="og:title" content="Net Hesaplama: Test Net Hesaplama (4 Yanlış 1 Doğru)">
+  <meta property="og:description" content="Doğru ve yanlış sayını gir, testlerin netini ve toplam netini anında gör. YKS, TYT, AYT, KPSS (4 yanlış 1 doğru) ve LGS (3 yanlış 1 doğru) için ücretsiz net hesaplama.">
+  <meta property="og:image" content="https://ritimyks.com/assets/img/og.jpg">
+  <meta property="og:url" content="https://ritimyks.com/net-hesaplama/">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://ritimyks.com/net-hesaplama/">
+  <link rel="icon" href="../assets/img/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Net nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Net = doğru sayısı − (yanlış sayısı ÷ 4). YKS, TYT, AYT, KPSS ve ALES'te dört yanlış bir doğruyu götürür. LGS'de üç yanlış bir doğruyu götürür. Boş bırakılan sorular neti etkilemez."}}, {"@type": "Question", "name": "4 yanlış 1 doğruyu götürür ne demek?", "acceptedAnswer": {"@type": "Answer", "text": "Her dört yanlış cevap, bir doğru cevabın puanını siler. Örneğin 30 doğru ve 8 yanlış yaptıysan netin 30 − 8 ÷ 4 = 28 olur. Tek bir yanlış 0,25 net kaybettirir."}}, {"@type": "Question", "name": "Toplam net nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her testin netini ayrı ayrı hesaplayıp toplarsın. Toplam neti doğrudan toplam doğru ve toplam yanlıştan da bulabilirsin; sonuç aynıdır, çünkü her testte aynı kural uygulanır."}}, {"@type": "Question", "name": "Boş bırakmak mı, tahmin etmek mi daha iyi?", "acceptedAnswer": {"@type": "Answer", "text": "Beş şıklı bir soruda rastgele işaretlersen beklenen kazancın sıfırdır: 0,2 ihtimalle 1 doğru, 0,8 ihtimalle 0,25 net kayıp. İki şıkkı eleyebiliyorsan işaretlemek beklenen olarak kazandırır."}}, {"@type": "Question", "name": "Net puan demek mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Net, puanın hammaddesidir. Puan, netlerin ÖSYM'nin katsayılarıyla çarpılıp taban puana eklenmesiyle bulunur. YKS puanını görmek için puan hesaplama sayfasını kullanabilirsin."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#arac">Araca geç</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="Ritim ana sayfa">
+        <img src="../assets/img/icon.svg" width="36" height="36" alt="">
+        <span>Ritim</span>
+      </a>
+      <nav class="nav-links" aria-label="YKS araçları">
+        <a href="../puan-hesaplama/">Puan hesaplama</a>
+        <a href="../net-hesaplama/" aria-current="page">Net hesaplama</a>
+        <a href="../tyt-net-hesaplama/">TYT net</a>
+        <a href="../ayt-net-hesaplama/">AYT net</a>
+        <a href="../obp-hesaplama/">OBP</a>
+        <a href="../yks-kac-gun-kaldi/">Kaç gün kaldı</a>
+      </nav>
+      <a class="btn btn-light nav-cta" href="../#indir">İndir</a>
+    </div>
+  </header>
+
+    <main>
+    <section class="calc-hero">
+      <div class="wrap">
+        <h1>Net hesaplama</h1>
+        <p class="lead">Her test için doğru ve yanlış sayını gir; testlerin netini ve toplam netini anında gör. YKS, TYT, AYT, KPSS ve LGS kuralıyla çalışır.</p>
+      </div>
+    </section>
+
+    <section class="calc" id="arac" aria-label="Net hesaplama">
+      <div class="wrap calc-grid">
+        <form class="calc-form" id="form" novalidate>
+          <label class="field rule-field"><span>Kaç yanlış bir doğruyu götürüyor?</span>
+            <select id="rule">
+              <option value="4" selected>4 yanlış (YKS, TYT, AYT, KPSS, ALES)</option>
+              <option value="3">3 yanlış (LGS)</option>
+              <option value="0">Yanlış doğruyu götürmüyor</option>
+            </select>
+          </label>
+          <fieldset class="tests" id="tests"><legend>Testler</legend></fieldset>
+          <div class="calc-actions">
+            <button type="button" class="btn btn-ghost" id="add">+ Test ekle</button>
+            <button type="reset" class="btn btn-ghost">Temizle</button>
+          </div>
+        </form>
+        <aside class="result" aria-live="polite">
+          <h2>Sonucun</h2>
+          <dl>
+            <div><dt>Toplam doğru</dt><dd id="r-d">0</dd></div>
+            <div><dt>Toplam yanlış</dt><dd id="r-y">0</dd></div>
+            <div><dt>Yanlışların götürdüğü</dt><dd id="r-lost">0,00</dd></div>
+            <div class="main"><dt>Toplam net</dt><dd id="r-net">0,00</dd></div>
+          </dl>
+          <div class="result-cta">
+            <p><b>TYT veya AYT mi çözdün?</b> Ders ders net ve puan için hazır hesaplayıcıları kullan.</p>
+            <a class="btn btn-gold" href="../tyt-net-hesaplama/">TYT net hesaplama</a>
+            <a class="btn btn-ghost" href="../ayt-net-hesaplama/">AYT net hesaplama</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="calc-info">
+      <div class="wrap calc-info-grid">
+        <article>
+          <h2>Net nasıl hesaplanır?</h2>
+          <p>Formül tek satır: <b>net = doğru − yanlış ÷ 4</b>. Dört yanlış bir doğruyu götürür, yani her yanlış 0,25 net kaybettirir. Boş bıraktığın sorular netini değiştirmez.</p>
+          <p>Örnek: 40 soruluk bir testte 30 doğru, 8 yanlış ve 2 boş yaptıysan netin 30 − 2 = <b>28</b> olur.</p>
+        </article>
+        <article>
+          <h2>Hangi sınavda kaç yanlış?</h2>
+          <p>YKS'nin iki oturumu TYT ve AYT'de, KPSS'de, ALES'te ve DGS'de dört yanlış bir doğruyu götürür. LGS'de bu kural üç yanlış bir doğrudur.</p>
+          <p>Toplam netin, testlerin netlerinin toplamıdır. Deneme sonuçlarını takip ederken toplam netten çok test test netine bakmak, hangi derse çalışman gerektiğini daha net gösterir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="sss-title">
+      <div class="wrap faq-grid">
+        <h2 id="sss-title" class="section-title">Sık sorulanlar</h2>
+        <div class="faq">
+          <details>
+            <summary>Net nasıl hesaplanır?</summary>
+            <p>Net = doğru sayısı − (yanlış sayısı ÷ 4). YKS, TYT, AYT, KPSS ve ALES&#x27;te dört yanlış bir doğruyu götürür. LGS&#x27;de üç yanlış bir doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p>
+          </details>
+          <details>
+            <summary>4 yanlış 1 doğruyu götürür ne demek?</summary>
+            <p>Her dört yanlış cevap, bir doğru cevabın puanını siler. Örneğin 30 doğru ve 8 yanlış yaptıysan netin 30 − 8 ÷ 4 = 28 olur. Tek bir yanlış 0,25 net kaybettirir.</p>
+          </details>
+          <details>
+            <summary>Toplam net nasıl hesaplanır?</summary>
+            <p>Her testin netini ayrı ayrı hesaplayıp toplarsın. Toplam neti doğrudan toplam doğru ve toplam yanlıştan da bulabilirsin; sonuç aynıdır, çünkü her testte aynı kural uygulanır.</p>
+          </details>
+          <details>
+            <summary>Boş bırakmak mı, tahmin etmek mi daha iyi?</summary>
+            <p>Beş şıklı bir soruda rastgele işaretlersen beklenen kazancın sıfırdır: 0,2 ihtimalle 1 doğru, 0,8 ihtimalle 0,25 net kayıp. İki şıkkı eleyebiliyorsan işaretlemek beklenen olarak kazandırır.</p>
+          </details>
+          <details>
+            <summary>Net puan demek mi?</summary>
+            <p>Hayır. Net, puanın hammaddesidir. Puan, netlerin ÖSYM&#x27;nin katsayılarıyla çarpılıp taban puana eklenmesiyle bulunur. YKS puanını görmek için puan hesaplama sayfasını kullanabilirsin.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Hesabı Ritim tutsun, sen çalış.</h2>
+        <p>Ritim denemelerini okur, netlerinin gidişini gösterir ve sınava kadar haftanı planlar. Premium ayda sadece ₺33.</p>
+        <div class="stores"><a class="btn btn-light" href="../">Ritim'i tanı</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Ritim, YKS koçu</span>
+      <nav aria-label="Site">
+        <a href="../">Ana sayfa</a>
+        <a href="../puan-hesaplama/">YKS puan hesaplama</a>
+        <a href="../net-hesaplama/">Net hesaplama</a>
+        <a href="../tyt-net-hesaplama/">TYT net hesaplama</a>
+        <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
+        <a href="../obp-hesaplama/">OBP hesaplama</a>
+        <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
+        <a href="../privacy/">Gizlilik</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n, d = 2) => n.toLocaleString("tr-TR", { minimumFractionDigits: d, maximumFractionDigits: d });
+    let count = 0;
+    function addRow(name) {
+      count++;
+      const label = name || ("Test " + count);
+      $("tests").insertAdjacentHTML("beforeend", `<div class="test" data-test>
+        <span class="test-name"><input class="test-title" type="text" value="${label}" aria-label="Test adı" maxlength="24"></span>
+        <label class="field"><span>Doğru</span><input type="number" inputmode="numeric" min="0" data-kind="d" aria-label="${label} doğru"></label>
+        <label class="field"><span>Yanlış</span><input type="number" inputmode="numeric" min="0" data-kind="y" aria-label="${label} yanlış"></label>
+        <output class="net" aria-label="${label} net">0,00</output>
+      </div>`);
+    }
+    function calc() {
+      const k = +$("rule").value;
+      let D = 0, Y = 0, net = 0;
+      document.querySelectorAll("[data-test]").forEach((el) => {
+        const d = Math.max(0, Math.floor(+el.querySelector('[data-kind="d"]').value || 0));
+        const y = Math.max(0, Math.floor(+el.querySelector('[data-kind="y"]').value || 0));
+        const n = k ? d - y / k : d;
+        el.querySelector(".net").textContent = fmt(n);
+        D += d; Y += y; net += n;
+      });
+      $("r-d").textContent = D; $("r-y").textContent = Y;
+      $("r-lost").textContent = fmt(k ? Y / k : 0); $("r-net").textContent = fmt(net);
+    }
+    ["Türkçe", "Matematik", "Fen", "Sosyal"].forEach(addRow);
+    $("add").addEventListener("click", () => { addRow(); calc(); });
+    $("form").addEventListener("input", calc);
+    $("form").addEventListener("reset", () => setTimeout(calc, 0));
+    calc();
+  </script>
+</body>
+</html>

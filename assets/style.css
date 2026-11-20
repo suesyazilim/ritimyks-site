@@ -429,3 +429,15 @@ section { scroll-margin-top: 16px; }
   .countdown { grid-template-columns: 1fr; }
   .cd-rest { grid-template-columns: 1fr 1fr; }
 }
+
+/* Araç sayfaları: 6 bağlantılı menü, genel net hesaplayıcı */
+.nav-links[aria-label="YKS araçları"] { gap: 20px; font-size: .95rem; }
+@media (max-width: 1040px) { .nav-links[aria-label="YKS araçları"] { display: none; } }
+.rule-field { width: 100%; max-width: 420px; }
+.rule-field select, .test-title {
+  font: 700 1rem/1.2 var(--body); color: var(--text); background: #15132E;
+  border: 1.5px solid var(--line-strong); border-radius: 12px; padding: 12px 14px; min-height: 48px; width: 100%;
+}
+.test-title { padding: 10px 12px; min-width: 0; }
+.rule-field select:focus, .test-title:focus { outline: none; border-color: var(--peri); box-shadow: 0 0 0 3px rgba(142, 155, 255, .3); }
+.calc-actions { display: flex; flex-wrap: wrap; gap: 12px; }

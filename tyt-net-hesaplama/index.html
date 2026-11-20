@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
   <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "TYT neti nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her testte net = doğru sayısı − (yanlış sayısı ÷ 4). Dört yanlış bir doğruyu götürür, boşlar neti etkilemez. Toplam TYT neti dört testin netlerinin toplamıdır."}}, {"@type": "Question", "name": "TYT'de kaç soru var?", "acceptedAnswer": {"@type": "Answer", "text": "TYT'de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20 soru."}}, {"@type": "Question", "name": "TYT puanı için baraj var mı?", "acceptedAnswer": {"@type": "Answer", "text": "TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapılması gerekir."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "TYT neti nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her testte net = doğru sayısı − (yanlış sayısı ÷ 4). Dört yanlış bir doğruyu götürür, boşlar neti etkilemez. Toplam TYT neti dört testin netlerinin toplamıdır."}}, {"@type": "Question", "name": "TYT'de kaç soru var?", "acceptedAnswer": {"@type": "Answer", "text": "TYT'de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20 soru."}}, {"@type": "Question", "name": "TYT puanı için baraj var mı?", "acceptedAnswer": {"@type": "Answer", "text": "TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapılması gerekir."}}, {"@type": "Question", "name": "Toplam net nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Türkçe, Sosyal, Matematik ve Fen netlerini ayrı ayrı hesaplayıp toplarsın. Bu sayfa her testin netini ve toplamı yazarken gösterir."}}]}
   </script>
 </head>
 <body>
@@ -35,7 +35,9 @@
       </a>
       <nav class="nav-links" aria-label="YKS araçları">
         <a href="../puan-hesaplama/">Puan hesaplama</a>
+        <a href="../net-hesaplama/">Net hesaplama</a>
         <a href="../tyt-net-hesaplama/" aria-current="page">TYT net</a>
+        <a href="../ayt-net-hesaplama/">AYT net</a>
         <a href="../obp-hesaplama/">OBP</a>
         <a href="../yks-kac-gun-kaldi/">Kaç gün kaldı</a>
       </nav>
@@ -70,6 +72,7 @@
           <div class="result-cta">
             <p><b>AYT ve OBP ile yerleştirme puanın?</b> Tam hesap için puan hesaplama sayfasını kullan.</p>
             <a class="btn btn-gold" href="../puan-hesaplama/">YKS puan hesaplama</a>
+            <a class="btn btn-ghost" href="../ayt-net-hesaplama/">AYT net hesaplama</a>
           </div>
         </aside>
       </div>
@@ -79,7 +82,7 @@
       <div class="wrap calc-info-grid">
         <article>
           <h2>TYT neti nasıl hesaplanır?</h2>
-          <p>Her testte <b>net = doğru − yanlış ÷ 4</b> formülü kullanılır. Dört yanlış bir doğruyu götürür; boş bıraktığın sorular netini değiştirmez.</p>
+          <p>Her testte <b>net = doğru − yanlış ÷ 4</b> formülü kullanılır (genel kural için <a href="../net-hesaplama/">net hesaplama</a>). Dört yanlış bir doğruyu götürür; boş bıraktığın sorular netini değiştirmez.</p>
           <p>TYT'de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20. Toplam netin bu dört testin netlerinin toplamıdır.</p>
         </article>
         <article>
@@ -87,6 +90,30 @@
           <p>TYT puanı 100 taban puanla başlar; her testin neti kendi katsayısıyla çarpılıp eklenir. Katsayıları ÖSYM her yıl sınav sonuçlarına göre belirlediği için buradaki puan yaklaşık bir değerdir.</p>
           <p>TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapman gerekir.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="sss-title">
+      <div class="wrap faq-grid">
+        <h2 id="sss-title" class="section-title">Sık sorulanlar</h2>
+        <div class="faq">
+          <details>
+            <summary>TYT neti nasıl hesaplanır?</summary>
+            <p>Her testte net = doğru sayısı − (yanlış sayısı ÷ 4). Dört yanlış bir doğruyu götürür, boşlar neti etkilemez. Toplam TYT neti dört testin netlerinin toplamıdır.</p>
+          </details>
+          <details>
+            <summary>TYT&#x27;de kaç soru var?</summary>
+            <p>TYT&#x27;de 120 soru vardır: Türkçe 40, Sosyal Bilimler 20, Temel Matematik 40 ve Fen Bilimleri 20 soru.</p>
+          </details>
+          <details>
+            <summary>TYT puanı için baraj var mı?</summary>
+            <p>TYT puanının hesaplanması için Türkçe veya Temel Matematik testinden en az 0,5 net yapılması gerekir.</p>
+          </details>
+          <details>
+            <summary>Toplam net nasıl hesaplanır?</summary>
+            <p>Türkçe, Sosyal, Matematik ve Fen netlerini ayrı ayrı hesaplayıp toplarsın. Bu sayfa her testin netini ve toplamı yazarken gösterir.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -105,7 +132,9 @@
       <nav aria-label="Site">
         <a href="../">Ana sayfa</a>
         <a href="../puan-hesaplama/">YKS puan hesaplama</a>
+        <a href="../net-hesaplama/">Net hesaplama</a>
         <a href="../tyt-net-hesaplama/">TYT net hesaplama</a>
+        <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
         <a href="../obp-hesaplama/">OBP hesaplama</a>
         <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
         <a href="../privacy/">Gizlilik</a>

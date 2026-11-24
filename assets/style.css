@@ -31,6 +31,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -442,9 +443,9 @@ section { scroll-margin-top: 16px; }
   .cd-rest { grid-template-columns: 1fr 1fr; }
 }
 
-/* Araç sayfaları: 6 bağlantılı menü, genel net hesaplayıcı */
-.nav-links[aria-label="YKS araçları"] { gap: 20px; font-size: .95rem; }
-@media (max-width: 1040px) {
+/* Araç sayfaları: birleşik YKS araç menüsü, genel net hesaplayıcı */
+.nav-links[aria-label="YKS araçları"] { gap: 16px; font-size: .9rem; }
+@media (max-width: 1120px) {
   .nav { overflow-x: clip; }
   .nav .wrap { flex-wrap: wrap; gap: 0 16px; padding-top: 10px; padding-bottom: 6px; min-height: 64px; }
   .nav-cta { margin-left: auto; }
@@ -464,3 +465,99 @@ section { scroll-margin-top: 16px; }
 .test-title { padding: 10px 12px; min-width: 0; }
 .rule-field select:focus, .test-title:focus { outline: none; border-color: var(--peri); box-shadow: 0 0 0 3px rgba(142, 155, 255, .3); }
 .calc-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Ücretsiz YKS Araçları Hub (Ana Sayfa & Çapraz Bağlantı) ---------- */
+.tools-hub { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
+.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+.tool-card {
+  display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; border-radius: 18px;
+  background: var(--surface); border: 1px solid var(--line); text-decoration: none;
+  transition: border-color .15s ease, transform .15s ease, background-color .15s ease;
+}
+.tool-card:hover { border-color: var(--peri); background: var(--surface-2); transform: translateY(-2px); }
+.tool-card b { font: 800 1.08rem/1.25 var(--display); color: var(--text); }
+.tool-card span { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.tool-card em { margin-top: auto; padding-top: 8px; font-style: normal; font-size: .82rem; font-weight: 800; color: var(--peri); }
+@media (max-width: 900px) { .tools-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .tools-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Sıralama Hesaplama (3 Yıllık Karşılaştırma Kartları & Mod Sekmeleri) ---------- */
+.mode-tabs { display: inline-flex; flex-wrap: wrap; gap: 8px; padding: 6px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.mode-tabs button {
+  border: 0; background: transparent; color: var(--muted); font: 800 .95rem/1 var(--body);
+  padding: 12px 18px; border-radius: 12px; cursor: pointer; transition: background-color .15s ease, color .15s ease;
+}
+.mode-tabs button[aria-selected="true"] { background: var(--peri); color: #14122B; }
+.rank-years { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.rank-year { background: #19173C; border: 1px solid var(--line); border-radius: 14px; padding: 12px 10px; text-align: center; }
+.rank-year.primary { border-color: var(--gold); background: rgba(237, 190, 90, .09); }
+.rank-year small { display: block; font-size: .78rem; font-weight: 800; color: var(--muted); }
+.rank-year b { display: block; margin-top: 4px; font: 800 1.25rem/1.1 var(--display); color: var(--text); font-variant-numeric: tabular-nums; }
+.rank-year.primary b { color: var(--gold); }
+.band-pill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px;
+  background: rgba(142, 155, 255, .14); color: var(--peri-soft); font-size: .82rem; font-weight: 800; margin-top: 10px;
+}
+
+/* ---------- Konu & 10 Yıllık ÖSYM Soru Dağılımı Sayfaları ---------- */
+.topic-controls { display: grid; gap: 16px; margin-bottom: 24px; }
+.control-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.search-input {
+  flex: 1 1 260px; max-width: 420px; min-height: 46px; padding: 0 16px; border-radius: 12px;
+  border: 1.5px solid var(--line-strong); background: #15132E; color: var(--text); font: 700 .98rem/1 var(--body);
+}
+.search-input::placeholder { color: var(--dim); }
+.search-input:focus { outline: none; border-color: var(--peri); box-shadow: 0 0 0 3px rgba(142, 155, 255, .3); }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 0 14px; border-radius: 999px;
+  border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--peri-soft);
+  font: 700 .88rem/1 var(--body); cursor: pointer; transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.chip:hover { border-color: var(--peri); color: #fff; }
+.chip.active { background: var(--peri); border-color: var(--peri); color: #14122B; font-weight: 800; }
+.chip small { opacity: .78; font-weight: 700; }
+
+.progress-strip {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding: 16px 20px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 24px;
+}
+.progress-meta { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.progress-meta strong { font: 800 1.15rem/1.2 var(--display); color: var(--text); }
+.progress-meta span { color: var(--muted); font-size: .92rem; }
+.progress-track { flex: 1 1 220px; height: 10px; border-radius: 999px; background: #14122B; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--peri), #B8C0FF); border-radius: 999px; transition: width .25s ease; }
+
+.subject-block { margin-top: 28px; }
+.subject-block:first-child { margin-top: 0; }
+.subject-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; }
+.subject-head h2 { font-size: 1.45rem; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; }
+.subject-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; flex: none; }
+.subject-head span { color: var(--muted); font-size: .9rem; font-weight: 700; }
+
+.topic-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.topic-table { width: 100%; border-collapse: collapse; min-width: 680px; font-size: .92rem; font-variant-numeric: tabular-nums; }
+.topic-table th, .topic-table td { padding: 11px 12px; text-align: center; border-bottom: 1px solid var(--line); }
+.topic-table th { background: var(--surface-2); color: var(--peri-soft); font-weight: 800; font-size: .82rem; white-space: nowrap; }
+.topic-table td.t-check, .topic-table th.t-check { width: 42px; text-align: center; }
+.topic-table td.t-name, .topic-table th.t-name { text-align: left; min-width: 210px; }
+.topic-table td.t-name b { display: block; color: var(--text); font-weight: 800; }
+.topic-table td.t-name small { display: block; color: var(--dim); font-size: .78rem; }
+.topic-table td.t-zero { color: rgba(180, 177, 216, .28); }
+.topic-table td.t-hi { color: var(--peri-soft); font-weight: 800; }
+.topic-table td.t-total { font: 800 .98rem/1 var(--display); color: #fff; text-align: right; white-space: nowrap; min-width: 96px; }
+.topic-table tr:last-child td { border-bottom: 0; }
+.topic-table tr.done td.t-name b { color: var(--dim); text-decoration: line-through; }
+.topic-table input[type="checkbox"] { width: 19px; height: 19px; accent-color: var(--peri); cursor: pointer; }
+.freq-bar { display: inline-block; vertical-align: middle; width: 46px; height: 6px; border-radius: 999px; background: rgba(201, 206, 247, .12); margin-right: 8px; overflow: hidden; }
+.freq-bar i { display: block; height: 100%; background: var(--peri); border-radius: 999px; }
+.topic-table tr.hot td.t-total { color: var(--gold); }
+.topic-table tr.hot .freq-bar i { background: var(--gold); }
+
+.top-topics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.top-topic { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; }
+.top-topic small { display: block; color: var(--peri); font-weight: 800; font-size: .78rem; }
+.top-topic b { display: block; margin-top: 3px; font: 800 1.05rem/1.25 var(--display); }
+.top-topic span { display: block; margin-top: 4px; color: var(--muted); font-size: .86rem; }
+@media (max-width: 820px) { .top-topics-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .rank-years { grid-template-columns: 1fr; } }

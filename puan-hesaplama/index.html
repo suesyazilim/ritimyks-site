@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YKS Puan Hesaplama 2027: TYT, AYT ve OBP | Ritim</title>
-  <meta name="description" content="TYT ve AYT doğru-yanlışlarını gir; netini, ham puanını ve OBP dahil yerleştirme puanını anında gör. Sayısal, Eşit Ağırlık ve Sözel için ücretsiz YKS puan hesaplama.">
+  <title>YKS Puan Hesaplama 2027: TYT, AYT, YDT ve OBP | Ritim</title>
+  <meta name="description" content="TYT, AYT ve YDT doğru-yanlışlarını gir; netini, ham puanını ve OBP dahil yerleştirme puanını anında gör. Sayısal, Eşit Ağırlık, Sözel ve Dil için ücretsiz YKS puan hesaplama.">
   <meta name="theme-color" content="#14122B">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ritim">
-  <meta property="og:title" content="YKS Puan Hesaplama 2027: TYT, AYT ve OBP">
+  <meta property="og:title" content="YKS Puan Hesaplama 2027: TYT, AYT, YDT ve OBP">
   <meta property="og:description" content="Doğru-yanlışlarını gir; netini, ham puanını ve OBP dahil yerleştirme puanını anında gör.">
   <meta property="og:image" content="https://ritimyks.com/assets/img/og.jpg">
   <meta property="og:url" content="https://ritimyks.com/puan-hesaplama/">
@@ -74,7 +74,7 @@
     <section class="calc-hero">
       <div class="wrap">
         <h1>YKS puan hesaplama</h1>
-        <p class="lead">TYT ve AYT doğru-yanlışlarını gir; netin, ham puanın ve OBP dahil yerleştirme puanın yazarken hesaplansın. Ücretsiz, kayıt yok; girdiklerin tarayıcından çıkmaz.</p>
+        <p class="lead">TYT, AYT veya YDT doğru-yanlışlarını gir; netin, ham puanın ve OBP dahil yerleştirme puanın yazarken hesaplansın. Ücretsiz, kayıt yok; girdiklerin tarayıcından çıkmaz.</p>
       </div>
     </section>
 
@@ -86,6 +86,7 @@
             <label><input type="radio" name="track" value="say" checked><span>Sayısal</span></label>
             <label><input type="radio" name="track" value="ea"><span>Eşit Ağırlık</span></label>
             <label><input type="radio" name="track" value="soz"><span>Sözel</span></label>
+            <label><input type="radio" name="track" value="dil"><span>Dil (YDT)</span></label>
           </fieldset>
 
           <fieldset class="tests" id="tyt">
@@ -93,16 +94,16 @@
           </fieldset>
 
           <fieldset class="tests" id="ayt">
-            <legend>AYT <small id="ayt-count">80 soru</small></legend>
+            <legend><span id="ayt-title">AYT</span> <small id="ayt-count">80 soru</small></legend>
           </fieldset>
 
           <fieldset class="obp">
             <legend>Diploma notu <small>isteğe bağlı</small></legend>
             <div class="obp-row">
               <label class="field"><span>Diploma notun (50–100)</span>
-                <input type="number" id="diploma" inputmode="decimal" min="50" max="100" step="0.01" placeholder="örn. 85">
+                <input type="number" id="diploma" name="diploma" inputmode="decimal" min="50" max="100" step="0.01" placeholder="örn. 85">
               </label>
-              <label class="check"><input type="checkbox" id="kirik"><span>Geçen yıl bir programa yerleştim (kırık OBP)</span></label>
+              <label class="check"><input type="checkbox" id="kirik" name="kirik"><span>Geçen yıl bir programa yerleştim (kırık OBP)</span></label>
             </div>
           </fieldset>
 
@@ -113,7 +114,7 @@
           <h2>Sonucun</h2>
           <dl>
             <div><dt>TYT neti</dt><dd id="r-tyt-net">0,00</dd></div>
-            <div><dt>AYT neti</dt><dd id="r-ayt-net">0,00</dd></div>
+            <div><dt id="r-ayt-label">AYT neti</dt><dd id="r-ayt-net">0,00</dd></div>
             <div><dt>TYT puanı <small id="r-tyt-kind">ham</small></dt><dd id="r-tyt">–</dd></div>
             <div class="main"><dt><span id="r-track">Sayısal</span> puanı <small id="r-kind">ham</small></dt><dd id="r-score">–</dd></div>
             <div><dt>OBP katkısı</dt><dd id="r-obp">–</dd></div>
@@ -133,7 +134,7 @@
         <article>
           <h2>YKS puanı nasıl hesaplanır?</h2>
           <p>Önce her test için netin bulunur: <b>net = doğru − yanlış ÷ 4</b>. Dört yanlış bir doğruyu götürür, boşlar neti etkilemez.</p>
-          <p>TYT puanı, 100 taban puanın üzerine Türkçe, Sosyal Bilimler, Temel Matematik ve Fen Bilimleri netlerinin katsayılarla çarpılıp eklenmesiyle oluşur. Sayısal, Eşit Ağırlık ve Sözel puanlarında TYT'nin ağırlığı %40, AYT'nin ağırlığı %60'tır; bu yüzden alan puanında AYT netleri daha yüksek katsayıyla çarpılır.</p>
+          <p>TYT puanı, 100 taban puanın üzerine Türkçe, Sosyal Bilimler, Temel Matematik ve Fen Bilimleri netlerinin katsayılarla çarpılıp eklenmesiyle oluşur. Sayısal, Eşit Ağırlık, Sözel ve Dil (YDT) puanlarında TYT'nin ağırlığı %40, AYT veya YDT'nin ağırlığı %60'tır; bu yüzden alan puanında alan netleri daha yüksek katsayıyla çarpılır.</p>
           <p>Son olarak diploma notundan gelen OBP katkısı eklenir ve <b>yerleştirme puanı</b> ortaya çıkar. Tercihlerde kullanılan puan budur.</p>
         </article>
         <article>
@@ -157,8 +158,15 @@
 
   <footer class="footer">
     <div class="wrap">
-      <span>© 2026 Ritim, YKS koçu</span>
-      <nav aria-label="Site">
+      <div class="footer-top">
+        <span>© 2026 Ritim: YKS Koçu</span>
+        <div class="footer-social" aria-label="Sosyal medya">
+          <a href="https://www.instagram.com/ritimyks/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/ritimyks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.tiktok.com/@ritimyks" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <nav aria-label="YKS araçları">
         <a href="../">Ana sayfa</a>
         <a href="../puan-hesaplama/">YKS puan hesaplama</a>
         <a href="../net-hesaplama/">Net hesaplama</a>
@@ -166,7 +174,11 @@
         <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
         <a href="../obp-hesaplama/">OBP hesaplama</a>
         <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
-        <a href="../privacy/">Gizlilik</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Yasal">
+        <a href="../privacy/">Gizlilik Politikası</a>
+        <a href="../terms/">Kullanım Koşulları</a>
+        <a href="mailto:suesyazilim@gmail.com">İletişim</a>
       </nav>
     </div>
   </footer>
@@ -190,7 +202,9 @@
         ayt: [ { id: "ed", name: "Edebiyat", q: 24, k: 2.79 }, { id: "tar1", name: "Tarih-1", q: 10, k: 2.39 },
                { id: "cog1", name: "Coğrafya-1", q: 6, k: 2.70 }, { id: "tar2", name: "Tarih-2", q: 11, k: 3.80 },
                { id: "cog2", name: "Coğrafya-2", q: 11, k: 2.47 }, { id: "fel", name: "Felsefe Grubu", q: 12, k: 3.76 },
-               { id: "din", name: "Din Kültürü", q: 6, k: 2.36 } ] }
+               { id: "din", name: "Din Kültürü", q: 6, k: 2.36 } ] },
+      dil: { name: "Dil", base: 100.0, tyt: { tr: 1.32, sb: 1.32, tm: 1.32, fb: 1.32 },
+        ayt: [ { id: "ydt", name: "Yabancı Dil (YDT)", q: 80, k: 2.85 } ] }
     };
     const TYT_K = { tr: 3.3, sb: 3.4, tm: 3.3, fb: 3.4 };
 
@@ -200,8 +214,8 @@
     function row(prefix, t) {
       return `<div class="test" data-test="${prefix}-${t.id}" data-q="${t.q}">
         <span class="test-name">${t.name} <small>${t.q} soru</small></span>
-        <label class="field"><span>Doğru</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="d" aria-label="${t.name} doğru"></label>
-        <label class="field"><span>Yanlış</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="y" aria-label="${t.name} yanlış"></label>
+        <label class="field"><span>Doğru</span><input type="number" id="${prefix}-${t.id}-d" name="${prefix}-${t.id}-d" inputmode="numeric" min="0" max="${t.q}" data-kind="d" aria-label="${t.name} doğru"></label>
+        <label class="field"><span>Yanlış</span><input type="number" id="${prefix}-${t.id}-y" name="${prefix}-${t.id}-y" inputmode="numeric" min="0" max="${t.q}" data-kind="y" aria-label="${t.name} yanlış"></label>
         <output class="net" aria-label="${t.name} net">0,00</output>
       </div>`;
     }
@@ -212,10 +226,14 @@
     }
     function track() { return document.querySelector('input[name="track"]:checked').value; }
     function renderAyt() {
-      const t = TRACKS[track()];
+      const tr = track();
+      const t = TRACKS[tr];
+      const isDil = tr === "dil";
       $("ayt").querySelectorAll(".test").forEach((n) => n.remove());
       $("ayt").insertAdjacentHTML("beforeend", t.ayt.map((a) => row("ayt", a)).join(""));
+      $("ayt-title").textContent = isDil ? "YDT" : "AYT";
       $("ayt-count").textContent = t.ayt.reduce((s, a) => s + a.q, 0) + " soru";
+      $("r-ayt-label").textContent = isDil ? "YDT neti" : "AYT neti";
       $("r-track").textContent = t.name;
     }
 
@@ -263,6 +281,7 @@
       let aytOk;
       if (track() === "say") aytOk = ayt.mat >= 0.5 || ayt.fiz + ayt.kim + ayt.bio >= 0.5;
       else if (track() === "ea") aytOk = ayt.mat >= 0.5 || ayt.ed + ayt.tar1 + ayt.cog1 >= 0.5;
+      else if (track() === "dil") aytOk = ayt.ydt >= 0.5;
       else aytOk = ayt.ed + ayt.tar1 + ayt.cog1 >= 0.5 || ayt.tar2 + ayt.cog2 + ayt.fel + ayt.din >= 0.5;
       const anyAyt = t.ayt.some((x) => document.querySelector(`[data-test="ayt-${x.id}"] [data-kind="d"]`).value !== "");
 

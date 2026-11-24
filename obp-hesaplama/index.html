@@ -60,9 +60,9 @@
             <legend>Diploma notu</legend>
             <div class="obp-row">
               <label class="field"><span>Diploma notun (50–100)</span>
-                <input type="number" id="diploma" inputmode="decimal" min="50" max="100" step="0.01" placeholder="örn. 85">
+                <input type="number" id="diploma" name="diploma" inputmode="decimal" min="50" max="100" step="0.01" placeholder="örn. 85">
               </label>
-              <label class="check"><input type="checkbox" id="kirik"><span>Geçen yıl bir programa yerleştim (kırık OBP)</span></label>
+              <label class="check"><input type="checkbox" id="kirik" name="kirik"><span>Geçen yıl bir programa yerleştim (kırık OBP)</span></label>
             </div>
           </fieldset>
           <button type="reset" class="btn btn-ghost">Temizle</button>
@@ -109,8 +109,15 @@
 
   <footer class="footer">
     <div class="wrap">
-      <span>© 2026 Ritim, YKS koçu</span>
-      <nav aria-label="Site">
+      <div class="footer-top">
+        <span>© 2026 Ritim: YKS Koçu</span>
+        <div class="footer-social" aria-label="Sosyal medya">
+          <a href="https://www.instagram.com/ritimyks/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/ritimyks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.tiktok.com/@ritimyks" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <nav aria-label="YKS araçları">
         <a href="../">Ana sayfa</a>
         <a href="../puan-hesaplama/">YKS puan hesaplama</a>
         <a href="../net-hesaplama/">Net hesaplama</a>
@@ -118,7 +125,11 @@
         <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
         <a href="../obp-hesaplama/">OBP hesaplama</a>
         <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
-        <a href="../privacy/">Gizlilik</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Yasal">
+        <a href="../privacy/">Gizlilik Politikası</a>
+        <a href="../terms/">Kullanım Koşulları</a>
+        <a href="mailto:suesyazilim@gmail.com">İletişim</a>
       </nav>
     </div>
   </footer>

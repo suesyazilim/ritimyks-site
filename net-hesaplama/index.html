@@ -57,7 +57,7 @@
       <div class="wrap calc-grid">
         <form class="calc-form" id="form" novalidate>
           <label class="field rule-field"><span>Kaç yanlış bir doğruyu götürüyor?</span>
-            <select id="rule">
+            <select id="rule" name="rule">
               <option value="4" selected>4 yanlış (YKS, TYT, AYT, KPSS, ALES)</option>
               <option value="3">3 yanlış (LGS)</option>
               <option value="0">Yanlış doğruyu götürmüyor</option>
@@ -140,8 +140,15 @@
 
   <footer class="footer">
     <div class="wrap">
-      <span>© 2026 Ritim, YKS koçu</span>
-      <nav aria-label="Site">
+      <div class="footer-top">
+        <span>© 2026 Ritim: YKS Koçu</span>
+        <div class="footer-social" aria-label="Sosyal medya">
+          <a href="https://www.instagram.com/ritimyks/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/ritimyks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.tiktok.com/@ritimyks" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <nav aria-label="YKS araçları">
         <a href="../">Ana sayfa</a>
         <a href="../puan-hesaplama/">YKS puan hesaplama</a>
         <a href="../net-hesaplama/">Net hesaplama</a>
@@ -149,7 +156,11 @@
         <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
         <a href="../obp-hesaplama/">OBP hesaplama</a>
         <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
-        <a href="../privacy/">Gizlilik</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Yasal">
+        <a href="../privacy/">Gizlilik Politikası</a>
+        <a href="../terms/">Kullanım Koşulları</a>
+        <a href="mailto:suesyazilim@gmail.com">İletişim</a>
       </nav>
     </div>
   </footer>
@@ -161,9 +172,9 @@
       count++;
       const label = name || ("Test " + count);
       $("tests").insertAdjacentHTML("beforeend", `<div class="test" data-test>
-        <span class="test-name"><input class="test-title" type="text" value="${label}" aria-label="Test adı" maxlength="24"></span>
-        <label class="field"><span>Doğru</span><input type="number" inputmode="numeric" min="0" data-kind="d" aria-label="${label} doğru"></label>
-        <label class="field"><span>Yanlış</span><input type="number" inputmode="numeric" min="0" data-kind="y" aria-label="${label} yanlış"></label>
+        <span class="test-name"><input class="test-title" type="text" id="test-${count}-name" name="test-${count}-name" value="${label}" aria-label="Test adı" maxlength="24"></span>
+        <label class="field"><span>Doğru</span><input type="number" id="test-${count}-d" name="test-${count}-d" inputmode="numeric" min="0" data-kind="d" aria-label="${label} doğru"></label>
+        <label class="field"><span>Yanlış</span><input type="number" id="test-${count}-y" name="test-${count}-y" inputmode="numeric" min="0" data-kind="y" aria-label="${label} yanlış"></label>
         <output class="net" aria-label="${label} net">0,00</output>
       </div>`);
     }

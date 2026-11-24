@@ -128,8 +128,15 @@
 
   <footer class="footer">
     <div class="wrap">
-      <span>© 2026 Ritim, YKS koçu</span>
-      <nav aria-label="Site">
+      <div class="footer-top">
+        <span>© 2026 Ritim: YKS Koçu</span>
+        <div class="footer-social" aria-label="Sosyal medya">
+          <a href="https://www.instagram.com/ritimyks/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/ritimyks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.tiktok.com/@ritimyks" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <nav aria-label="YKS araçları">
         <a href="../">Ana sayfa</a>
         <a href="../puan-hesaplama/">YKS puan hesaplama</a>
         <a href="../net-hesaplama/">Net hesaplama</a>
@@ -137,7 +144,11 @@
         <a href="../ayt-net-hesaplama/">AYT net hesaplama</a>
         <a href="../obp-hesaplama/">OBP hesaplama</a>
         <a href="../yks-kac-gun-kaldi/">YKS'ye kaç gün kaldı</a>
-        <a href="../privacy/">Gizlilik</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Yasal">
+        <a href="../privacy/">Gizlilik Politikası</a>
+        <a href="../terms/">Kullanım Koşulları</a>
+        <a href="mailto:suesyazilim@gmail.com">İletişim</a>
       </nav>
     </div>
   </footer>
@@ -151,8 +162,8 @@
     ];
     $("tyt").insertAdjacentHTML("beforeend", TESTS.map((t) => `<div class="test" data-test="${t.id}" data-q="${t.q}">
         <span class="test-name">${t.name} <small>${t.q} soru</small></span>
-        <label class="field"><span>Doğru</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="d" aria-label="${t.name} doğru"></label>
-        <label class="field"><span>Yanlış</span><input type="number" inputmode="numeric" min="0" max="${t.q}" data-kind="y" aria-label="${t.name} yanlış"></label>
+        <label class="field"><span>Doğru</span><input type="number" id="tyt-${t.id}-d" name="tyt-${t.id}-d" inputmode="numeric" min="0" max="${t.q}" data-kind="d" aria-label="${t.name} doğru"></label>
+        <label class="field"><span>Yanlış</span><input type="number" id="tyt-${t.id}-y" name="tyt-${t.id}-y" inputmode="numeric" min="0" max="${t.q}" data-kind="y" aria-label="${t.name} yanlış"></label>
         <output class="net" aria-label="${t.name} net">0,00</output>
       </div>`).join(""));
     function calc() {

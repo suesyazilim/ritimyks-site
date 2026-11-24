@@ -74,9 +74,17 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .nav-links a { text-decoration: none; font-weight: 700; color: var(--peri-soft); padding: 12px 0; }
 .nav-links a:hover { color: #fff; }
 .nav-cta { min-height: 42px; padding: 0 18px; }
-@media (max-width: 720px) {
-  .nav-links { display: none; }
+@media (max-width: 760px) {
+  .nav { overflow-x: clip; }
+  .nav .wrap { flex-wrap: wrap; gap: 0 16px; padding-top: 10px; padding-bottom: 6px; min-height: 64px; }
   .nav-cta { margin-left: auto; }
+  .nav-links {
+    order: 3; flex: 1 0 100%; min-width: 0; max-width: 100%; margin-left: 0; margin-top: 8px; padding: 4px 0;
+    gap: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    border-top: 1px solid var(--line); white-space: nowrap;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 8px 0; font-size: .92rem; flex: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -144,7 +152,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 /* ---------- Sahne: kaydırmaya bağlı telefon ---------- */
 .stage {
   --scenes: 6;
-  height: calc((var(--scenes) + 1) * 105vh + 100vh);
+  height: calc((var(--scenes) + 0.35) * 95vh + 100vh);
   background: var(--bg-2);
   position: relative;
 }
@@ -152,7 +160,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 
 .device {
   position: absolute; left: 50%; top: 50%;
-  width: min(350px, 35vh); width: min(350px, 35svh);
+  width: min(340px, 34vh); width: min(340px, 34svh);
   transform: translate(-50%, -50%);
   transform-origin: center;
   will-change: transform;
@@ -165,7 +173,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .captions {
   position: absolute; top: 0; bottom: 0;
   left: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
-  width: min(44vw, 520px);
+  width: min(42vw, 480px);
 }
 .caption {
   position: absolute; left: 0; right: 0; top: 50%;
@@ -184,9 +192,9 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 
 /* Sahne göstergesi: ritim çizgileri gibi dikey bir sıra */
 .rail {
-  position: absolute; right: max(18px, calc((100vw - var(--max)) / 2)); top: 50%;
+  position: absolute; right: max(20px, calc((100vw - var(--max)) / 2 + 8px)); top: 50%;
   transform: translateY(-50%); margin: 0; padding: 0; list-style: none;
-  display: grid; gap: 12px; justify-items: end;
+  display: grid; gap: 12px; justify-items: end; pointer-events: none;
   font-size: .8rem; font-weight: 700; color: var(--dim);
 }
 .rail li { display: flex; align-items: center; gap: 10px; transition: color .3s ease; }
@@ -194,9 +202,9 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .rail li.on { color: #fff; }
 .rail li.on::after { width: 34px; opacity: 1; background: var(--peri); }
 
-@media (max-width: 1100px) { .rail { display: none; } }
+@media (max-width: 1280px) { .rail { display: none; } }
 @media (max-width: 800px) {
-  .stage { height: calc((var(--scenes) + 1) * 95vh + 100vh); }
+  .stage { height: calc((var(--scenes) + 0.35) * 85vh + 100vh); }
   .device { width: min(300px, 36svh); }
   .captions { left: var(--gutter); right: var(--gutter); width: auto; }
   .caption { top: auto; bottom: max(22px, 4svh); margin-top: 0; }
@@ -310,10 +318,14 @@ section { scroll-margin-top: 16px; }
 .closing .stores { margin-top: 28px; }
 
 /* ---------- Alt bilgi ---------- */
-.footer { background: var(--bg); color: var(--dim); padding: 28px 0 36px; font-size: var(--step--1); border-top: 1px solid var(--line); }
-.footer .wrap { display: flex; flex-wrap: wrap; gap: 16px 28px; justify-content: space-between; align-items: center; }
-.footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
-.footer a { text-decoration: none; color: var(--peri-soft); padding: 10px 0; }
+.footer { background: var(--bg); color: var(--dim); padding: 32px 0 40px; font-size: var(--step--1); border-top: 1px solid var(--line); }
+.footer .wrap { display: grid; gap: 18px; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+.footer-social { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.footer-social a { color: var(--peri); font-weight: 700; padding: 6px 0; }
+.footer nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.footer-legal { padding-top: 12px; border-top: 1px solid var(--line); }
+.footer a { text-decoration: none; color: var(--peri-soft); padding: 6px 0; }
 .footer a:hover { color: #fff; text-decoration: underline; }
 
 /* ---------- Yasal sayfalar ---------- */
@@ -432,7 +444,18 @@ section { scroll-margin-top: 16px; }
 
 /* Araç sayfaları: 6 bağlantılı menü, genel net hesaplayıcı */
 .nav-links[aria-label="YKS araçları"] { gap: 20px; font-size: .95rem; }
-@media (max-width: 1040px) { .nav-links[aria-label="YKS araçları"] { display: none; } }
+@media (max-width: 1040px) {
+  .nav { overflow-x: clip; }
+  .nav .wrap { flex-wrap: wrap; gap: 0 16px; padding-top: 10px; padding-bottom: 6px; min-height: 64px; }
+  .nav-cta { margin-left: auto; }
+  .nav-links[aria-label="YKS araçları"] {
+    display: flex; order: 3; flex: 1 0 100%; min-width: 0; max-width: 100%; margin-left: 0; margin-top: 8px; padding: 4px 0;
+    gap: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    border-top: 1px solid var(--line); white-space: nowrap;
+  }
+  .nav-links[aria-label="YKS araçları"]::-webkit-scrollbar { display: none; }
+  .nav-links[aria-label="YKS araçları"] a { padding: 8px 0; font-size: .92rem; flex: none; }
+}
 .rule-field { width: 100%; max-width: 420px; }
 .rule-field select, .test-title {
   font: 700 1rem/1.2 var(--body); color: var(--text); background: #15132E;

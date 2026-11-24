@@ -62,10 +62,30 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 }
 .btn-light { background: #fff; color: #191B40; }
 .btn-light:hover { background: var(--peri-soft); }
+.btn-brand {
+  background: linear-gradient(130deg, #9EA8FF 0%, #8390FF 48%, #B89BFF 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  color: #12102B;
+  border-color: rgba(255, 255, 255, .32);
+  padding: 0 26px;
+  gap: 9px;
+  box-shadow: 0 10px 28px -10px rgba(142, 155, 255, .65), inset 0 1px 0 rgba(255, 255, 255, .4);
+  transition: background-position .35s ease, transform .18s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.btn-brand::after { content: "→"; font: 800 1.05em/1 var(--display); transition: transform .2s ease; }
+.btn-brand:hover {
+  background-position: 100% 50%;
+  border-color: rgba(255, 255, 255, .58);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -10px rgba(184, 155, 255, .82), inset 0 1px 0 rgba(255, 255, 255, .52);
+}
+.btn-brand:hover::after { transform: translateX(3px); }
+.btn-brand:active { transform: translateY(0); }
 .btn-ghost { border-color: var(--line-strong); color: var(--text); background: transparent; }
 .btn-ghost:hover { border-color: var(--peri); background: rgba(142, 155, 255, .08); }
-.btn-gold { background: var(--gold); color: var(--gold-ink); }
-.btn-gold:hover { background: #F3CD7A; }
+.btn-gold { background: var(--gold); color: var(--gold-ink); transition: background-color .15s ease, transform .16s ease, box-shadow .2s ease; }
+.btn-gold:hover { background: #F3CD7A; transform: translateY(-1px); box-shadow: 0 10px 24px -12px rgba(237, 190, 90, .75); }
 
 /* ---------- Üst menü ---------- */
 .nav { background: var(--bg-2); }

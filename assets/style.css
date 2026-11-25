@@ -136,8 +136,16 @@ svg {
   border: 1.5px solid transparent;
   transition: background-color .15s ease, border-color .15s ease;
 }
-.btn-light { background: #fff; color: #191B40; }
-.btn-light:hover { background: var(--peri-soft); }
+
+.btn-light {
+  background: #fff;
+  color: #191B40;
+}
+
+.btn-light:hover {
+  background: var(--peri-soft);
+}
+
 .btn-brand {
   background: var(--gold);
   color: var(--gold-ink);
@@ -146,18 +154,49 @@ svg {
   box-shadow: 0 8px 22px -10px rgba(237, 190, 90, .55);
   transition: background-color .2s ease, transform .18s ease, box-shadow .22s ease;
 }
-.btn-brand::after { content: "→"; font: 800 1.05em/1 var(--display); transition: transform .2s ease; }
+
+.btn-brand::after {
+  content: "→";
+  font: 800 1.05em/1 var(--display);
+  transition: transform .2s ease;
+}
+
 .btn-brand:hover {
   background: #F6D585;
   transform: translateY(-2px);
   box-shadow: 0 14px 28px -10px rgba(237, 190, 90, .82);
 }
-.btn-brand:hover::after { transform: translateX(3px); }
-.btn-brand:active { transform: translateY(0); }
-.btn-ghost { border-color: var(--line-strong); color: var(--text); background: transparent; }
-.btn-ghost:hover { border-color: var(--peri); background: rgba(142, 155, 255, .08); }
-.btn-gold { background: var(--gold); color: var(--gold-ink); transition: background-color .15s ease, transform .16s ease, box-shadow .2s ease; }
-.btn-gold:hover { background: #F3CD7A; transform: translateY(-1px); box-shadow: 0 10px 24px -12px rgba(237, 190, 90, .75); }
+
+.btn-brand:hover::after {
+  transform: translateX(3px);
+}
+
+.btn-brand:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--peri);
+  background: rgba(142, 155, 255, .08);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--gold-ink);
+  transition: background-color .15s ease, transform .16s ease, box-shadow .2s ease;
+}
+
+.btn-gold:hover {
+  background: #F3CD7A;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px -12px rgba(237, 190, 90, .75);
+}
 
 .btn-light {
   background: #fff;
@@ -214,7 +253,7 @@ svg {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: clamp(14px, 2vw, 26px);
   margin-left: auto;
 }
 
@@ -223,6 +262,7 @@ svg {
   font-weight: 700;
   color: var(--peri-soft);
   padding: 12px 0;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -727,6 +767,27 @@ section {
 .coach-price b {
   color: var(--gold);
   font-weight: 800;
+}
+
+.coach-b2b {
+  margin-top: 14px;
+  font-size: 0.94rem;
+  color: var(--muted);
+  max-width: 34em;
+  line-height: 1.55;
+}
+
+.coach-b2b a {
+  color: var(--peri-soft);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(197, 200, 255, 0.35);
+  transition: color 0.16s ease, border-color 0.16s ease;
+}
+
+.coach-b2b a:hover {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .notes {
